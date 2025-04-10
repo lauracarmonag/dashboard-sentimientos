@@ -69,7 +69,7 @@ def load_sentiment_data():
     """
     try:
         # Cargar datos de sentimientos
-        df_sentiment = pd.read_csv('sentiment_results.csv')
+        df_sentiment = pd.read_csv('data/sentiment_results.csv')
         
         # Verificar que tenemos todas las columnas necesarias
         required_columns = ['texto', 'sentiment', 'sentiment_label', 'label', 'accuracy']
@@ -83,11 +83,11 @@ def load_sentiment_data():
 
 def load_forecast_data():
     """
-    Carga los datos de pronóstico del notebook 2_forecasting
+    Carga los datos de pronóstico
     """
     try:
         # Cargar datos de pronóstico
-        df_forecast = pd.read_csv('forecast_results.csv')
+        df_forecast = pd.read_csv('data/forecast_results.csv')
         return df_forecast
     except Exception as e:
         st.error(f"Error cargando datos de pronóstico: {str(e)}")
